@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { ProductoService } from '../service/producto.service';
-import { CdkDropListGroup } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-cardlist',

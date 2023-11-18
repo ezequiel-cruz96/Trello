@@ -1,0 +1,10 @@
+.card{
+    width: 300px;
+    background-color: white;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}

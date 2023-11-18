@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { DragDropModule } from 'primeng/dragdrop';
 import { HttpClientModule } from '@angular/common/http';
+import { CardModule } from 'primeng/card';
 
 import {
   CdkDragDrop,
@@ -17,9 +18,10 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
-  declarations: [AppComponent, CardlistComponent],
+  declarations: [AppComponent, CardlistComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,6 +32,7 @@ import {
     ButtonModule,
     DragDropModule,
     HttpClientModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

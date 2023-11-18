@@ -6,22 +6,20 @@
     gestión de proyectos , decidimos aplicar este conocimiento a nuestro tablero
     de Trello.
   </p>
-
   <section class="trello-wrapper">
-    <div class="p-2 border-1 surface-border border-round w-15rem">
-      <ul class="list-none flex flex-column gap-2 p-0 m-0">
-        <p>TODO</p>
-        <li
-          *ngFor="let product of productos"
-          class="p-2 border-round shadow-1"
-          pDraggable
-          (onDragStart)="dragStart(product)"
-          (onDragEnd)="dragEnd(product)"
-        >
-          {{ product.name }}
-        </li>
-      </ul>
+    <div>
+      <p>TODO</p>
+      <div
+        *ngFor="let product of productos"
+        class="card-wrapper"
+        pDraggable
+        (onDragStart)="dragStart(product)"
+        (onDragEnd)="dragEnd(product)"
+      >
+        <app-card [cardInformation]="product"> </app-card>
+      </div>
     </div>
+
     <div
       class="p-2 border-1 surface-border border-round w-15rem"
       pDroppable
