@@ -1,76 +1,21 @@
 .trello{
     margin: -20px;
     padding-left: 20px;
-    height: 100vh;
+    height: 100%;
     background-image: radial-gradient(circle at 50% -3.03%, #0092ff 0, #008dff 5.56%, #0088ff 11.11%, #0082ff 16.67%, #467cfb 22.22%, #7274f4 27.78%, #906ceb 33.33%, #a863df 38.89%, #bc59d2 44.44%, #cc50c4 50%, #d947b4 55.56%, #e33fa4 61.11%, #ea3993 66.67%, #ef3683 72.22%, #f13672 77.78%, #f13a61 83.33%, #ee4151 88.89%, #ea4941 94.44%, #e35131 100%);
+    margin-bottom: 100vh;
   }
 
 .title-trello{
-    text-align: center;
-  }
+  padding: 32px;
+  text-align: center;
+}
 
 .description-wrapper{
     width: 50vw;
     color: white;
+    padding: 32px;
 }
-
-
-
-.example-container {
-    width: 400px;
-    max-width: 100%;
-    margin: 0 25px 25px 0;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  .example-list {
-    border: solid 1px #ccc;
-    min-height: 60px;
-    background: white;
-    border-radius: 4px;
-    overflow: hidden;
-    display: block;
-  }
-  
-  .example-box {
-    padding: 20px 10px;
-    border-bottom: solid 1px #ccc;
-    color: rgba(0, 0, 0, 0.87);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    cursor: move;
-    background: white;
-    font-size: 14px;
-  }
-  
-  .cdk-drag-preview {
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-                0 8px 10px 1px rgba(0, 0, 0, 0.14),
-                0 3px 14px 2px rgba(0, 0, 0, 0.12);
-  }
-  
-  .cdk-drag-placeholder {
-    opacity: 0;
-  }
-  
-  .cdk-drag-animating {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  }
-  
-  .example-box:last-child {
-    border: none;
-  }
-  
-  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  }
-  
 
   .trello-wrapper{
     display: flex;
@@ -82,5 +27,23 @@
   .card-wrapper{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 16px;
+    margin-left: 50px;
+  }
+
+  .done-title{
+  font-size: 16px;
+   color: black;
+   text-align: center;
+   font-weight: 600;
+   margin-top: 12px;
+  }
+
+  .done-wrapper{
+    width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+    gap: 16px;
   }

@@ -1,8 +1,20 @@
 <div class="card">
-  <h1>{{ cardInformation.name }}</h1>
-  <p>{{ cardInformation.description }}</p>
+  <h1 class="title-card">{{ cardInformation.name }}</h1>
+  <p class="description-card">{{ cardInformation.description }}</p>
   <div class="button-wrapper">
-    <button>Edit</button>
-    <button>Delete</button>
+    <button type="button" class="btn btn-primary">
+      <i
+        class="pi pi-pencil"
+        style="font-size: 1rem; color: white; margin-right: 8px"
+      ></i
+      >Edit
+    </button>
+    <button type="button" class="btn btn-danger">
+      <i
+        class="pi pi-trash"
+        style="font-size: 1rem; color: white; margin-right: 8px"
+      ></i
+      >Delete
+    </button>
   </div>
 </div>

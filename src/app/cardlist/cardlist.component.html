@@ -7,8 +7,8 @@
     de Trello.
   </p>
   <section class="trello-wrapper">
-    <div>
-      <p>TODO</p>
+    <div class="done-wrapper">
+      <p class="done-title">TODO</p>
       <div
         *ngFor="let product of productos"
         class="card-wrapper"
@@ -20,63 +20,13 @@
       </div>
     </div>
 
-    <div
-      class="p-2 border-1 surface-border border-round w-15rem"
-      pDroppable
-      (onDrop)="drop()"
-    >
-      <p class="text-center surface-border border-bottom-1">Drop Zone</p>
-      <ul
-        class="list-none flex flex-column gap-2 p-0 m-0"
-        *ngIf="selectedProducts"
-      >
-        <li
-          *ngFor="let product of selectedProducts"
-          class="p-2 border-round shadow-1"
-        >
-          {{ product.name }}
-        </li>
-      </ul>
+    <div class="done-wrapper" pDroppable (onDrop)="drop()">
+      <p class="done-title">Done</p>
+      <div *ngIf="selectedProducts">
+        <div *ngFor="let product of selectedProducts" class="card-wrapper">
+          <app-card [cardInformation]="product"> </app-card>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- <section class="trello-wrapper">
-    <div class="p-2 border-1 surface-border border-round w-15rem">
-      <ul class="list-none flex flex-column gap-2 p-0 m-0">
-        <p>TODO</p>
-        <p
-          *ngFor="let product of productos"
-          class="p-2 border-round shadow-1"
-          pDraggable
-          (onDragStart)="dragStart(product)"
-          (onDragEnd)="dragEnd()"
-        >
-          {{ product.name }}
-        </p>
-      </ul>
-    </div>
-
-    <div
-      class="p-2 border-1 surface-border border-round w-15rem"
-      pDroppable
-      (onDrop)="drop()"
-    >
-      <p class="text-center surface-border border-bottom-1">Done</p>
-      <ul
-        class="list-none flex flex-column gap-2 p-0 m-0"
-        *ngIf="selectedProducts"
-      >
-        <li
-          *ngFor="let product of selectedProducts"
-          pDraggable
-          (onDragStart)="dragStart(product)"
-          (onDragEnd)="dragEnd()"
-          class="p-2 border-round shadow-1"
-        >
-          {{ product.name }}
-          <button (click)="eliminar(product.id)">eliminar</button>
-        </li>
-      </ul>
-    </div>
-  </section> -->
 </div>
