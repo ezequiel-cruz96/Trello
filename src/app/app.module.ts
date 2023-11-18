@@ -19,9 +19,11 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { CardComponent } from './card/card.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CompanyComponent } from './company/company.component';
 
 @NgModule({
-  declarations: [AppComponent, CardlistComponent, CardComponent],
+  declarations: [AppComponent, CardlistComponent, CardComponent, NavbarComponent, CompanyComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
